@@ -4,6 +4,7 @@ date: 2020-09-08 15:09:20
 tags: [FreeBSD, Jail]
 ---
 
+Jail的管理手段有很多, 包含ezjail, cbsd等; 从个人的简单需求以及对于epair的管理来看, 通过原生jail的配置进行管理是最简单的.
 
 # zfs的环境准备
 
