@@ -12,7 +12,7 @@ permalink: /tags/
 </ul>
 
 <ul class="tags-box">
-{% if site.posts != empty %}
+{% if tag != empty %}
 {% for tag in site.tags %}
 <li  id="{{ tag[0] }}">{{ tag[0] }}</li>
 {% for post in tag[1] %}
