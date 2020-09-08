@@ -4,22 +4,22 @@ title: Tags
 permalink: /tags/
 ---
 
-<ul class="tags-box">
-{% if site.posts != empty %}
-{% for tag in site.tags %}
-<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}<span class="size"> {{ tag[1].size }}</span></a>
+{% comment %}
+  'site.tags' looks like a Map, e.g. site.tags.MyTag.[ Post0, Post1, ... ]
+  Print the {{ site.tags }} will help you to understand it.
+{% endcomment %}
+<div id="tags" class="d-flex flex-wrap ml-xl-2 mr-xl-2">
+{% assign tags = "" | split: "" %}
+{% for t in site.tags %}
+  {% assign tags = tags | push: t[0] %}
 {% endfor %}
-</ul>
 
-<ul class="tags-box">
-{% for tag in site.tags %}
-<li  id="{{ tag[0] }}">{{ tag[0] }}</li>
-{% for post in tag[1] %}
-<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
-<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
+{% assign sorted_tags = tags | sort_natural %}
+
+{% for t in sorted_tags %}
+  <div>
+    <a class="tag" href="{{ site.baseurl }}/tags/{{ t | replace: ' ', '-' | downcase | url_encode }}/">{{ t }}<span class="text-muted">{{ site.tags[t].size }}</span></a>
+  </div>
 {% endfor %}
-{% endfor %}
-{% else %}
-<span>No posts</span>
-{% endif %}
-</ul>
+
+</div>
