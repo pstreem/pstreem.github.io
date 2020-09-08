@@ -8,11 +8,6 @@ layout: default
         {% continue %}
     {% endif %}
     <div class="post-card">
-        <a class="title" href="{{site.baseurl}}{{ post.url }}">
-            {{ post.title }}
-        </a>
-	<p>{{ post.excerpt }}</p>
-
         <div class="details">
             <b>{{ post.date | date: "%d %B %Y" }}</b>
             <br>
@@ -25,10 +20,19 @@ layout: default
             {% endif %}
         </div>
 
+        <a class="title" href="{{site.baseurl}}{{ post.url }}">
+            {{ post.title }}
+        </a>
+	<p>{{ post.excerpt }}</p>
+
+
         <div class="subtitle">
             {{ post.subtitle }}
         </div>
+
+
     </div>
+
     {% if forloop.last == false %}
     <hr>
     {% endif %}
