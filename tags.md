@@ -2,7 +2,6 @@
 layout: page
 title: Tags
 permalink: /tags/
-group: navigation
 ---
 
 <ul class="tags-box">
@@ -13,6 +12,7 @@ group: navigation
 </ul>
 
 <ul class="tags-box">
+{% if tag = empty %}
 {% for tag in site.tags %}
 <li  id="{{ tag[0] }}">{{ tag[0] }}</li>
 {% for post in tag[1] %}
@@ -23,4 +23,13 @@ group: navigation
 {% else %}
 <span>No posts</span>
 {% endif %}
+
+<li  id="{{ tag[0] }}">{{ tag[0] }}</li>
+{% for post in tag[1] %}
+<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
+<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
+{% endfor %}
+{% endfor %}
+{% else %}
+<span>No posts</span>
 </ul>

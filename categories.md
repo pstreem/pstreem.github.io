@@ -2,7 +2,6 @@
 layout: page
 title: Categories
 permalink: /categories/
-group: navigation
 ---
 
 <ul class="tags-box">
