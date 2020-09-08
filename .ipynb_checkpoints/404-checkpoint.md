@@ -1,0 +1,6 @@
+---
+layout: page
+title: Page Not Found.
+permalink: /404.html
+---
+# 你寻找的页面走丢了

@@ -28,5 +28,5 @@ navbar:
  - name: "Tags"
    link: "tags/"
  - name: "About"
-   link: "about"
+   link: "about.html"
 
