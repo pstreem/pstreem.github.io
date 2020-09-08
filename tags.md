@@ -23,7 +23,7 @@ permalink: /tags/
 {% else %}
 <span>No posts</span>
 {% endif %}
-
+{% endif %}
 
 <span>No posts</span>
 </ul>
