@@ -1,0 +1,32 @@
+title: "azming.com 文章记录基地"
+author: Pst Ming
+subtitle: "go thought like superman"
+#theme: jekyll-theme-midnight
+############################
+usr: "https://pstreem.github.io"
+baseurl: "/"
+
+footer_only_homepage: true
+footer_url: "https://github.com/pstreem"
+footer_text: "Thanks for your visiting"
+
+prefile-picture: assets/profile.png
+favicon_location: assets/favicon.ico
+
+permalink: /:year-:month-:day-:title/
+#sass:
+#	style: compressed
+#	sass_dir: css
+
+navbar:
+ - name: "Home"
+   link: ""
+ - name: "Archives"
+   link: "archives/"
+ - name: "Categories"
+   link: "categories/"
+ - name: "Tags"
+   link: "tags/"
+ - name: "About"
+   link: "about"
+
