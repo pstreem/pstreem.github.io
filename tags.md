@@ -4,6 +4,14 @@ title: Tags
 permalink: /tags/
 ---
 
+<ul class="tags-box">
+{% if site.posts != empty %}
+{% for tag in site.tags %}
+<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}<span class="size"> {{ tag[1].size }}</span></a>
+{% endfor %}
+</ul>
+
+
 {% comment %}
   'site.tags' looks like a Map, e.g. site.tags.MyTag.[ Post0, Post1, ... ]
   Print the {{ site.tags }} will help you to understand it.
