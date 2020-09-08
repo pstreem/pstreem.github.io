@@ -1,26 +1,39 @@
 ---
-title: Blog
+title: default
 ---
 
-<nav class="site-nav">
-  <div class="trigger">
-    {% for page in site.pages %}
-    {% if page.title %}
-    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+{% assign has_post = false %}
+{% for post in site.posts %}
+    {% if post.private == true %}
+        {% continue %}
     {% endif %}
-    {% endfor %}
-  </div>
-</nav>
+    <div class="post-card">
+        <a class="title" href="{{site.baseurl}}{{ post.url }}">
+            {{ post.title }}
+        </a>
 
+        <div class="details">
+            <b>{{ post.date | date: "%d %B %Y" }}</b>
+            <br>
+            {% if post.tags %}
+                <b>[</b>
+                {% for tag in post.tags %}
+                    <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}
+                {% endfor %}
+                <b>]</b>
+            {% endif %}
+        </div>
 
+        <div class="subtitle">
+            {{ post.subtitle }}
+        </div>
+    </div>
+    {% if forloop.last == false %}
+    <hr>
+    {% endif %}
+    {% assign has_post = true %}
+{% endfor %}
+{% if has_post == false %}
+    <div class="no-post">I've lost the ink pot. Check back later...</div>
+{% endif %}
 
-<h1>Latest Posts</h1>
-
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
