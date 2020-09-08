@@ -13,7 +13,7 @@ permalink: /tags/
 
 <ul class="tags-box">
 {% if tag = empty %}
-{% for post in tag[1] %}
+{% for tag in site.tags %}
 <li  id="{{ tag[0] }}">{{ tag[0] }}</li>
 {% for post in tag[1] %}
 <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
