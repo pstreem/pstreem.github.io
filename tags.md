@@ -12,7 +12,7 @@ permalink: /tags/
 </ul>
 
 <ul class="tags-box">
-{% if tag != empty %}
+
 {% for tag in site.tags %}
 <li  id="{{ tag[0] }}">{{ tag[0] }}</li>
 {% for post in tag[1] %}
@@ -23,7 +23,5 @@ permalink: /tags/
 {% else %}
 <span>No posts</span>
 {% endif %}
-{% endif %}
 
-<span>No posts</span>
 </ul>
