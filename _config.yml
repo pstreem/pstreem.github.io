@@ -13,7 +13,7 @@ footer_text: "Thanks for your visiting"
 prefile-picture: assets/profile.png
 favicon_location: assets/favicon.ico
 
-#permalink: /:year-:month-:day-:title/
+permalink: /:year-:month-:day-:title/
 #sass:
 #	style: compressed
 #	sass_dir: css
