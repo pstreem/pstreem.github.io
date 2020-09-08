@@ -3,10 +3,8 @@ title: Blog
 ---
 
 <header class="site-header">
-
     <span> <section class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></section> 
       <section class="site-meta">{{ site.tagline }}</section> </span>
-
     <nav class="site-nav">
       <div class="trigger">
         {% for page in site.pages %}
