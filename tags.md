@@ -14,7 +14,6 @@ permalink: /tags/
 
 <ul class="tags-box">
 
-
 <li  id="{{ tag[0] }}">{{ tag[0] }}</li>
 {% for post in tag[1] %}
 <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
