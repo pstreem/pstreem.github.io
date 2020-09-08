@@ -8,7 +8,7 @@ baseurl: "/"
 
 footer_only_homepage: true
 footer_url: "https://github.com/pstreem"
-footer_text: "theme by pro-panda"
+footer_text: "Thanks for your visiting"
 
 prefile-picture: assets/profile.png
 favicon_location: assets/favicon.ico
