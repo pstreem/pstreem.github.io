@@ -13,10 +13,10 @@ footer_text: "theme by pro-panda"
 prefile-picture: assets/profile.png
 favicon_location: assets/favicon.ico
 
-permalink: /:year-:month-:day-:title/
-sass:
-	style: compressed
-	sass_dir: css
+#permalink: /:year-:month-:day-:title/
+#sass:
+#	style: compressed
+#	sass_dir: css
 
 navbar:
  - name: "Home"
