@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Tags
-permalink: /tags
+permalink: /tags/
+group: navigation
 ---
 
 <ul class="tags-box">

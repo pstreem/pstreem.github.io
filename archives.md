@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Archives
-permalink: /archives
+permalink: /archives/
+group: navigation
 ---
 
 <ul class="tags-box">

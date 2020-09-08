@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Categories
-permalink: /categories
+permalink: /categories/
+group: navigation
 ---
 
 <ul class="tags-box">
