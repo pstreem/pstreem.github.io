@@ -12,7 +12,7 @@ permalink: /tags/
 </ul>
 
 <ul class="tags-box">
-{% if tag = empty %}
+
 {% for tag in site.tags %}
 <li  id="{{ tag[0] }}">{{ tag[0] }}</li>
 {% for post in tag[1] %}
@@ -24,12 +24,6 @@ permalink: /tags/
 <span>No posts</span>
 {% endif %}
 
-<li  id="{{ tag[0] }}">{{ tag[0] }}</li>
-{% for post in tag %}
-<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
-<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
-{% endfor %}
-{% endfor %}
-{% else %}
+
 <span>No posts</span>
 </ul>
