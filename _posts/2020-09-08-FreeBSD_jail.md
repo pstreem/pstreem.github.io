@@ -1,6 +1,6 @@
 ---
-title: 创建的第一篇文章
-date: 2020-09-08 09:32:20
+title: 利用FreeBSD原生Jail来管理jail
+date: 2020-09-08 15:09:20
 tags: [FreeBSD, Jail]
 ---
 
