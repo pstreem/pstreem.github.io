@@ -6,7 +6,6 @@ title: Blog
   <div class="trigger">
     {% for page in site.pages %}
     {% if page.title %}
-    {% if page.group = 'navigation' %}
     <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
     {% endif %}
     {% endfor %}
