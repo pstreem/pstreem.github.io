@@ -16,4 +16,4 @@ commit_comment = '-m \"'+date+'\"'
 #print (repo.git.commit(commit_comment))
 print (repo.git.commit('-m', date))
 
-print (repo.git.push(master))
+print (repo.git.push())
