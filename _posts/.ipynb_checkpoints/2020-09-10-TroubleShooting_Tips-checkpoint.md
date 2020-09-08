@@ -1,5 +1,5 @@
 ---
-title: 记录使用过程中的各种TroubleShooting&Tips
+title: 记录各种TroubleShooting&Tips
 date: 2020-09-08 15:09:20
 tags: [FreeBSD, Jail, Git, DB, NFS]
 ---
