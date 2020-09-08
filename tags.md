@@ -6,6 +6,7 @@ permalink: /tags/
 
 <ul class="tags-box">
 {% if site.posts != empty %}
+  
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}<span class="size"> {{ tag[1].size }}</span></a>
 {% endfor %}
@@ -13,7 +14,6 @@ permalink: /tags/
 
 <ul class="tags-box">
 
-{% if tag = empty %}
 
 {% for tag in site.tags %}
 <li  id="{{ tag[0] }}">{{ tag[0] }}</li>
@@ -26,6 +26,6 @@ permalink: /tags/
 <span>No posts</span>
 {% endif %}
 
-{% endif %}
+
 
 </ul>
