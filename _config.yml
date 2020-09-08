@@ -20,15 +20,13 @@ favicon_location: assets/favicon.ico
 
 navbar:
  - name: "Home"
-   link: "/"
+   link: ""
  - name: "Archives"
-   link: "/archives/"
+   link: "archives/"
  - name: "Categories"
-   link: "/categories/"
- - name: "Archives"
-   link: "/archives/"
+   link: "categories/"
  - name: "Tags"
-   link: "/tags/"
+   link: "tags/"
  - name: "About"
-   link: "/about"
+   link: "about"
 
