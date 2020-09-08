@@ -1,6 +1,7 @@
 ---
 title: Pyton简要知识点记录
 date: 2020-09-08 11:50:20 -0000
+tags: [Python, FreeBSD]
 ---
 
 对于Python学习过程的记录，便于对于一些基础信息和概念的查询。
