@@ -18,6 +18,8 @@ permalink: /:year-:month-:day-:title/
 #	style: compressed
 #	sass_dir: css
 
+markdown: kramdown
+
 navbar:
  - name: "Home"
    link: ""
