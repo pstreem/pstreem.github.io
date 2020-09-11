@@ -17,6 +17,26 @@ tags: [FreeBSD, Jail, Git, DB, NFS]
 jail -m jid=3 allow.sysvipc=1
 sysctl security.jail.sysvipc_allowed=1
 
+
+## Pgsql 添加用户
+
+```
+su - postgres
+```
+
+```
+createdb -O user dbname
+```
+
+or
+
+```
+createdb dbname
+GRANT permissions ON DATABASE dbname TO username;
+```
+
+
+
 ## FreeBSD升级版本之后PKG不可用
 
 先强制删除pkg, 然后重新安装.
@@ -120,3 +140,84 @@ or use https protocal like this :
 >git log
 >git status
 >git diff
+
+
+# upgrade FreeBSD from Version A -> B
+
+## double check the version
+> freebsd-version
+
+>>11.2-RELEASE-p7
+
+> uname -mrs
+
+>>FreeBSD 11.2-RELEASE-p7 amd64
+
+## update the binary use freebsd-update
+> freebsd-update fetch install
+
+> pkg update && pkg upgrade
+
+## use freebsd-update to upgrade
+
+> freebsd-update -r 12.0-RELEASE upgrade
+
+## commit the upgrade
+
+> freebsd-update install
+
+> reboot the system & freebsd-update install again
+
+## upgrade package
+
+after upgrade system , you need upgrade the pkg again use the command as below :
+> pkg-static install -f pkg
+> pkg update
+> pkg upgrade
+
+after pkg upgrade , please use :
+> freebsd-update install
+double check again
+
+## double check the system version
+
+> freebsd-version
+
+> uname -mrs
+
+> freebsd-update fetch install 
+
+## makesure the system is normally 
+
+> ps auxw
+> sockstat -l
+> netstat -anp
+> top
+
+# FreeBSD Bhyve passthru
+
+## 手动方式
+
+```
+devctl detach pci0:4:0:0
+devctl set driver pci0:4:0:0 ppt
+pciconf -lv
+```
+modify the configuration in vm, and the line into the conf file:
+```
+passthru0="4/0/0"
+
+```
+
+## 随系统配置
+
+/boot/loader.conf
+```
+pptdevs="0/20/0"
+```
+
+bhyve VM config:
+```
+passthru0="0/20/0"
+```
+
