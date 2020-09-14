@@ -7,10 +7,16 @@ import time
 #repo = git.Repo.init(path='/home/pstreem/project/github')
 repo = git.Repo('/home/pstreem/project/github')
 
-print (repo.git.pull())
-print (repo.git.add('.'))
+pull_info = repo.git.pull()
+
+add_info = repo.git.add('.')
 
 date = time.ctime()
-print (repo.git.commit('-m', date))
 
-print (repo.git.push())
+commit_info = repo.git.commit('-m', date)
+push_info = repo.git.push()
+
+log_file = open('push.log','w',encoding='utf-8')
+log_file.write(commit_info, pull_info, add_info, push_info)
+log_file.write('\n')
+log_file.close()
