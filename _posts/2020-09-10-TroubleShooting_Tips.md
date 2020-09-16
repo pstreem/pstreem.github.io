@@ -40,7 +40,9 @@ GRANT permissions ON DATABASE dbname TO username;
 ## FreeBSD升级版本之后PKG不可用
 
 先强制删除pkg, 然后重新安装.
+
 `pkg remove -f pkg`
+
 `pkg install pkg`
 
 
