@@ -1,4 +1,4 @@
-[master 6ccd2f4] Wed Sep 23 20:49:34 2020
- 2 files changed, 0 insertions(+), 0 deletions(-)
- rename {_draft => _drafts}/2020-09-14-Automation_CICD.md (100%)
- rename {_draft => _drafts}/2020-09-16-Build_WordPress.md (100%)Already up to date.
+[master e741b2a] Wed Sep 23 20:55:33 2020
+ 3 files changed, 106 insertions(+), 10 deletions(-)
+ create mode 100644 _posts/.ipynb_checkpoints/2020-09-16-Build_WordPress-checkpoint.md
+ rename {_drafts => _posts}/2020-09-16-Build_WordPress.md (58%)Already up to date.
