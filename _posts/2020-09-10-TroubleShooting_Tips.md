@@ -141,10 +141,13 @@ or use https protocal like this :
 >git status
 >git diff
 
+### pull 到local做merge
+>git pull origin master --allow-unrelated-histories
 
 # upgrade FreeBSD from Version A -> B
 
 ## double check the version
+
 > freebsd-version
 
 >>11.2-RELEASE-p7
