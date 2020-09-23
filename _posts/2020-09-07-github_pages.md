@@ -10,7 +10,7 @@ here is the guide, how to build up this blog.
 
 ## 目录结构
 
-![image-20200914174617687](C:\Users\eimnnnu\OneDrive - Ericsson AB\Documents\Markdown\github\_posts\assets\image-20200914174617687.png)
+![image-20200914174617687](./assets/image-20200914174617687.png)
 
 
 here is the first page.
